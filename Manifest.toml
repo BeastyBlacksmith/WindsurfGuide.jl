@@ -588,7 +588,7 @@ version = "1.4.3"
 
 [[deps.WeatherReport]]
 deps = ["CSV", "DataFrames", "Dates", "HTTP", "JSON", "Preferences", "PrettyTables", "SQLite", "StringDistances", "UnicodePlots"]
-path = "WeatherReport.jl"
+path = "../WeatherReport.jl"
 uuid = "3c954167-71e4-4212-9688-830d6b8fcbc2"
 version = "0.21.2"
 
