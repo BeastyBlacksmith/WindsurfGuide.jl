@@ -52,3 +52,15 @@ function check_bodyweight(bodyweight, sail_size)
     end
     return lb_wind, ub_wind, lb_sail, ub_sail
 end
+
+function print_rec(bodyweight, sail_size)
+    lb_wind, ub_wind, lb_sail, ub_sail = check_bodyweight(bodyweight, sail_size)
+    if sail_size < lb_sail
+        println("Your sail size is too small for your bodyweight. Please consider a sail size of at least $(lb_sail) m².")
+    elseif sail_size > ub_sail
+        println("Your sail size is too big for your bodyweight. Please consider a sail size of at most $(ub_sail) m².")
+    else
+        println("Your sail size is appropriate for your bodyweight. Your recommended wind range is between $(lb_wind) and $(ub_wind) knots.")
+    end
+end
+
