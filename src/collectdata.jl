@@ -1,6 +1,4 @@
 using Pkg
-Pkg.activate(".")
-Pkg.develop(path="../WeatherReport.jl")
 Pkg.add("DataFrames")
 Pkg.add("CSV")
 using WeatherReport
