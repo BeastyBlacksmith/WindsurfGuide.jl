@@ -2,9 +2,10 @@ using Pkg
 Pkg.activate(".")
 Pkg.develop(path="../WeatherReport.jl")
 Pkg.add("DataFrames")
+Pkg.add("CSV")
 using WeatherReport
 using DataFrames
-include("mycode.jl")
+using CSV
 
 function collect_wind_data(city)
 
@@ -14,8 +15,8 @@ function collect_wind_data(city)
         "temperature_2m",
         "apparent_temperature",
         "windspeed_10m",
-        "wind_direction_10m",
-        "wind_gusts_10m"]
+        "wind_gusts_10m",
+        "wind_direction_10m"]
 
     for parameter in parameters
         df_data, location = WeatherReport.get_hourly_forecast(
@@ -32,9 +33,16 @@ function collect_wind_data(city)
                 rename!(df_data, Dict(:FORECAST => "$(parameter)"))
             end
         end
+
+        if parameter == "windspeed_10m" || parameter == "wind_gusts_10m"
+            df_wind[!, parameter] = round.(df_wind[!, parameter] * 0.5399568, digits = 1) # Umrechnung von km/h in Knoten
+        end
+
     end
 
     return df_wind
 
 end
 
+df_wind = collect_wind_data("Sankt Peter-Ording")
+# this dataframe was saved to CSV on 2026-09-04 for further usage as a test dataset.
