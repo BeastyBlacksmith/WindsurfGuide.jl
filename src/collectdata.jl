@@ -44,5 +44,5 @@ function collect_wind_data(city)
 
 end
 
-df_wind = collect_wind_data("Sankt Peter-Ording")
+# df_wind = collect_wind_data("Sankt Peter-Ording")
 # this dataframe was saved to CSV on 2026-09-04 for further usage as a test dataset.
