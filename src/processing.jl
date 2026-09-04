@@ -30,3 +30,25 @@ function check_wind_sail(sails, sail_size, i, lb_wind, ub_wind, lb_sail, ub_sail
     end
     return lb_wind, ub_wind, lb_sail, ub_sail
 end
+
+function check_bodyweight(bodyweight, sail_size)
+    sails = CSV.read("data/weight_sail_knots.csv", DataFrame, missingstring = "missing")
+    lb_wind = 30
+    ub_wind = 0
+    lb_sail = 10
+    ub_sail = 0
+    for i in 1:size(sails, 1)
+        if ismissing(sails."min_weight"[i])
+            if bodyweight < sails."max_weight"[i]
+                lb_wind, ub_wind, lb_sail, ub_sail = check_wind_sail(sails, sail_size, i, lb_wind, ub_wind, lb_sail, ub_sail)
+            end
+        elseif ismissing(sails."max_weight"[i])
+            if sails."min_weight"[i] <= bodyweight
+                lb_wind, ub_wind, lb_sail, ub_sail = check_wind_sail(sails, sail_size, i, lb_wind, ub_wind, lb_sail, ub_sail)
+            end
+        elseif sails."min_weight"[i] <= bodyweight < sails."max_weight"[i]
+            lb_wind, ub_wind, lb_sail, ub_sail = check_wind_sail(sails, sail_size, i, lb_wind, ub_wind, lb_sail, ub_sail)
+        end
+    end
+    return lb_wind, ub_wind, lb_sail, ub_sail
+end
