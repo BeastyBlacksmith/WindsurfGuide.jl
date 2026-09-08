@@ -1,0 +1,187 @@
+min_knots;max_knots;min_weight;max_weight;min_sail;max_sail;beginner;intermediate;advanced
+0;1;missing;55;missing;missing;too low;too low;too low
+0;1;55;65;missing;missing;too low;too low;too low
+0;1;65;75;missing;missing;too low;too low;too low
+0;1;75;85;missing;missing;too low;too low;too low
+0;1;85;95;missing;missing;too low;too low;too low
+0;1;95;missing;missing;missing;too low;too low;too low
+1;2;missing;55;missing;missing;too low;too low;too low
+1;2;55;65;missing;missing;too low;too low;too low
+1;2;65;75;missing;missing;too low;too low;too low
+1;2;75;85;missing;missing;too low;too low;too low
+1;2;85;95;missing;missing;too low;too low;too low
+1;2;95;missing;missing;missing;too low;too low;too low
+2;3;missing;55;missing;missing;too low;too low;too low
+2;3;55;65;missing;missing;too low;too low;too low
+2;3;65;75;missing;missing;too low;too low;too low
+2;3;75;85;missing;missing;too low;too low;too low
+2;3;85;95;missing;missing;too low;too low;too low
+2;3;95;missing;missing;missing;too low;too low;too low
+3;4;missing;55;missing;missing;too low;too low;too low
+3;4;55;65;missing;missing;too low;too low;too low
+3;4;65;75;missing;missing;too low;too low;too low
+3;4;75;85;missing;missing;too low;too low;too low
+3;4;85;95;missing;missing;too low;too low;too low
+3;4;95;missing;missing;missing;too low;too low;too low
+4;5;missing;55;4;4.5;good;too low for your skill level;too low for your skill level
+4;5;55;65;4.5;5;good;too low for your skill level;too low for your skill level
+4;5;65;75;5;5.5;good;too low for your skill level;too low for your skill level
+4;5;75;85;5.5;6;good;too low for your skill level;too low for your skill level
+4;5;85;95;6;7;good;too low for your skill level;too low for your skill level
+4;5;95;missing;7;7.5;good;too low for your skill level;too low for your skill level
+5;6;missing;55;4;4.5;good;too low for your skill level;too low for your skill level
+5;6;55;65;4.5;5;good;too low for your skill level;too low for your skill level
+5;6;65;75;5;5.5;good;too low for your skill level;too low for your skill level
+5;6;75;85;5.5;6;good;too low for your skill level;too low for your skill level
+5;6;85;95;6;7;good;too low for your skill level;too low for your skill level
+5;6;95;missing;7;7.5;good;too low for your skill level;too low for your skill level
+6;7;missing;55;4;4.5;very good;good;good
+6;7;55;65;4.5;5;very good;good;good
+6;7;65;75;5;5.5;very good;good;good
+6;7;75;85;5.5;6;very good;good;good
+6;7;85;95;6;7;very good;good;good
+6;7;95;missing;7;7.5;very good;good;good
+7;8;missing;55;4;4.5;very good;good;good
+7;8;55;65;4.5;5;very good;good;good
+7;8;65;75;5;5.5;very good;good;good
+7;8;75;85;5.5;6;very good;good;good
+7;8;85;95;6;7;very good;good;good
+7;8;95;missing;7;7.5;very good;good;good
+8;9;missing;55;4;4.5;very good;good;good
+8;9;55;65;4.5;5;very good;good;good
+8;9;65;75;5;5.5;very good;good;good
+8;9;75;85;5.5;6;very good;good;good
+8;9;85;95;6;7;very good;good;good
+8;9;95;missing;7;7.5;very good;good;good
+9;10;missing;55;4;4.5;very good;good;good
+9;10;55;65;4.5;5;very good;good;good
+9;10;65;75;5;5.5;very good;good;good
+9;10;75;85;5.5;6;very good;good;good
+9;10;85;95;6;7;very good;good;good
+9;10;95;missing;7;7.5;very good;good;good
+10;11;missing;55;4;4.5;good for improvement;very good;good
+10;11;55;65;4.5;5;good for improvement;very good;good
+10;11;65;75;5;5.5;good for improvement;very good;good
+10;11;75;85;5.5;6;good for improvement;very good;good
+10;11;85;95;6;7;good for improvement;very good;good
+10;11;95;missing;7;7.5;good for improvement;very good;good
+11;12;missing;55;4;4.5;good for improvement;very good;good
+11;12;55;65;4.5;5;good for improvement;very good;good
+11;12;65;75;5;5.5;good for improvement;very good;good
+11;12;75;85;5.5;6;good for improvement;very good;good
+11;12;85;95;6;7;good for improvement;very good;good
+11;12;95;missing;7;7.5;good for improvement;very good;good
+12;13;missing;55;4;4.5;good for improvement;very good;good
+12;13;55;65;4.5;5;good for improvement;very good;good
+12;13;65;75;5;5.5;good for improvement;very good;good
+12;13;75;85;5.5;6;good for improvement;very good;good
+12;13;85;95;6;7;good for improvement;very good;good
+12;13;95;missing;7;7.5;good for improvement;very good;good
+13;14;missing;55;3.5;4;good for improvement;very good;good
+13;14;55;65;4;4.5;good for improvement;very good;good
+13;14;65;75;4.5;5;good for improvement;very good;good
+13;14;75;85;5;5.5;good for improvement;very good;good
+13;14;85;95;5.5;6;good for improvement;very good;good
+13;14;95;missing;6;7;good for improvement;very good;good
+14;15;missing;55;3.5;4;good for improvement;very good;good
+14;15;55;65;4;4.5;good for improvement;very good;good
+14;15;65;75;4.5;5;good for improvement;very good;good
+14;15;75;85;5;5.5;good for improvement;very good;good
+14;15;85;95;5.5;6;good for improvement;very good;good
+14;15;95;missing;6;7;good for improvement;very good;good
+15;16;missing;55;3.5;4;good for improvement;very good;good
+15;16;55;65;4;4.5;good for improvement;very good;good
+15;16;65;75;4.5;5;good for improvement;very good;good
+15;16;75;85;5;5.5;good for improvement;very good;good
+15;16;85;95;5.5;6;good for improvement;very good;good
+15;16;95;missing;6;7;good for improvement;very good;good
+16;17;missing;55;3.5;4;too strong for your skill level;good for improvement;very good
+16;17;55;65;4;4.5;too strong for your skill level;good for improvement;very good
+16;17;65;75;4.5;5;too strong for your skill level;good for improvement;very good
+16;17;75;85;5;5.5;too strong for your skill level;good for improvement;very good
+16;17;85;95;5.5;6;too strong for your skill level;good for improvement;very good
+16;17;95;missing;6;7;too strong for your skill level;good for improvement;very good
+17;18;missing;55;3.5;4;too strong for your skill level;good for improvement;very good
+17;18;55;65;4;4.5;too strong for your skill level;good for improvement;very good
+17;18;65;75;4.5;5;too strong for your skill level;good for improvement;very good
+17;18;75;85;5;5.5;too strong for your skill level;good for improvement;very good
+17;18;85;95;5.5;6;too strong for your skill level;good for improvement;very good
+17;18;95;missing;6;7;too strong for your skill level;good for improvement;very good
+18;19;missing;55;3.5;4;too strong for your skill level;good for improvement;very good
+18;19;55;65;4;4.5;too strong for your skill level;good for improvement;very good
+18;19;65;75;4.5;5;too strong for your skill level;good for improvement;very good
+18;19;75;85;5;5.5;too strong for your skill level;good for improvement;very good
+18;19;85;95;5.5;6;too strong for your skill level;good for improvement;very good
+18;19;95;missing;6;7;too strong for your skill level;good for improvement;very good
+19;20;missing;55;3;3.5;too strong for your skill level;good for improvement;very good
+19;20;55;65;3.5;4;too strong for your skill level;good for improvement;very good
+19;20;65;75;4;4.5;too strong for your skill level;good for improvement;very good
+19;20;75;85;4.5;5;too strong for your skill level;good for improvement;very good
+19;20;85;95;5;5.5;too strong for your skill level;good for improvement;very good
+19;20;95;missing;5.5;6;too strong for your skill level;good for improvement;very good
+20;21;missing;55;3;3.5;too strong for your skill level;good for improvement;very good
+20;21;55;65;3.5;4;too strong for your skill level;good for improvement;very good
+20;21;65;75;4;4.5;too strong for your skill level;good for improvement;very good
+20;21;75;85;4.5;5;too strong for your skill level;good for improvement;very good
+20;21;85;95;5;5.5;too strong for your skill level;good for improvement;very good
+20;21;95;missing;5.5;6;too strong for your skill level;good for improvement;very good
+21;22;missing;55;3;3.5;too strong for your skill level;too strong for your skill level;good for improvement
+21;22;55;65;3.5;4;too strong for your skill level;too strong for your skill level;good for improvement
+21;22;65;75;4;4.5;too strong for your skill level;too strong for your skill level;good for improvement
+21;22;75;85;4.5;5;too strong for your skill level;too strong for your skill level;good for improvement
+21;22;85;95;5;5.5;too strong for your skill level;too strong for your skill level;good for improvement
+21;22;95;missing;5.5;6;too strong for your skill level;too strong for your skill level;good for improvement
+22;23;missing;55;3;3.5;too strong for your skill level;too strong for your skill level;good for improvement
+22;23;55;65;3.5;4;too strong for your skill level;too strong for your skill level;good for improvement
+22;23;65;75;4;4.5;too strong for your skill level;too strong for your skill level;good for improvement
+22;23;75;85;4.5;5;too strong for your skill level;too strong for your skill level;good for improvement
+22;23;85;95;5;5.5;too strong for your skill level;too strong for your skill level;good for improvement
+22;23;95;missing;5.5;6;too strong for your skill level;too strong for your skill level;good for improvement
+23;24;missing;55;3;3.5;too strong for your skill level;too strong for your skill level;good for improvement
+23;24;55;65;3.5;4;too strong for your skill level;too strong for your skill level;good for improvement
+23;24;65;75;4;4.5;too strong for your skill level;too strong for your skill level;good for improvement
+23;24;75;85;4.5;5;too strong for your skill level;too strong for your skill level;good for improvement
+23;24;85;95;5;5.5;too strong for your skill level;too strong for your skill level;good for improvement
+23;24;95;missing;5.5;6;too strong for your skill level;too strong for your skill level;good for improvement
+24;25;missing;55;3;3.5;too strong for your skill level;too strong for your skill level;good for improvement
+24;25;55;65;3.5;4;too strong for your skill level;too strong for your skill level;good for improvement
+24;25;65;75;4;4.5;too strong for your skill level;too strong for your skill level;good for improvement
+24;25;75;85;4.5;5;too strong for your skill level;too strong for your skill level;good for improvement
+24;25;85;95;5;5.5;too strong for your skill level;too strong for your skill level;good for improvement
+24;25;95;missing;5.5;6;too strong for your skill level;too strong for your skill level;good for improvement
+25;26;missing;55;3;3.5;too strong for your skill level;too strong for your skill level;good for improvement
+25;26;55;65;3.5;4;too strong for your skill level;too strong for your skill level;good for improvement
+25;26;65;75;4;4.5;too strong for your skill level;too strong for your skill level;good for improvement
+25;26;75;85;4.5;5;too strong for your skill level;too strong for your skill level;good for improvement
+25;26;85;95;5;5.5;too strong for your skill level;too strong for your skill level;good for improvement
+25;26;95;missing;5.5;6;too strong for your skill level;too strong for your skill level;good for improvement
+26;27;missing;55;3;3.5;too strong for your skill level;too strong for your skill level;good for improvement
+26;27;55;65;3.5;4;too strong for your skill level;too strong for your skill level;good for improvement
+26;27;65;75;4;4.5;too strong for your skill level;too strong for your skill level;good for improvement
+26;27;75;85;4.5;5;too strong for your skill level;too strong for your skill level;good for improvement
+26;27;85;95;5;5.5;too strong for your skill level;too strong for your skill level;good for improvement
+26;27;95;missing;5.5;6;too strong for your skill level;too strong for your skill level;good for improvement
+27;28;missing;55;3;3.5;too high;too high;too high
+27;28;55;65;3.5;4;too high;too high;too high
+27;28;65;75;4;4.5;too high;too high;too high
+27;28;75;85;4.5;5;too high;too high;too high
+27;28;85;95;5;5.5;too high;too high;too high
+27;28;95;missing;5.5;6;too high;too high;too high
+28;29;missing;55;missing;missing;too high;too high;too high
+28;29;55;65;missing;missing;too high;too high;too high
+28;29;65;75;missing;missing;too high;too high;too high
+28;29;75;85;missing;missing;too high;too high;too high
+28;29;85;95;missing;missing;too high;too high;too high
+28;29;95;missing;missing;missing;too high;too high;too high
+29;30;missing;55;missing;missing;too high;too high;too high
+29;30;55;65;missing;missing;too high;too high;too high
+29;30;65;75;missing;missing;too high;too high;too high
+29;30;75;85;missing;missing;too high;too high;too high
+29;30;85;95;missing;missing;too high;too high;too high
+29;30;95;missing;missing;missing;too high;too high;too high
+30;31;missing;55;missing;missing;too high;too high;too high
+30;31;55;65;missing;missing;too high;too high;too high
+30;31;65;75;missing;missing;too high;too high;too high
+30;31;75;85;missing;missing;too high;too high;too high
+30;31;85;95;missing;missing;too high;too high;too high
+30;31;95;missing;missing;missing;too high;too high;too high
