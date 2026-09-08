@@ -1,9 +1,3 @@
-using Pkg
-Pkg.add("DataFrames")
-Pkg.add("CSV")
-using WeatherReport
-using DataFrames
-using CSV
 
 function collect_wind_data(city)
 
