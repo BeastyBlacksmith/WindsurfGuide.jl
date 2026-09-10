@@ -17,7 +17,7 @@ const HOURLY_FORECAST = ["temperature_2m",
                         "wind_gusts_10m", # added
                         "shortwave_radiation"
                         ]
-       
+
 mutable struct CityInput
     city::String
     forecast_type::String
