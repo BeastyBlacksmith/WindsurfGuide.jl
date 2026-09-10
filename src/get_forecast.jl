@@ -17,12 +17,6 @@ const HOURLY_FORECAST = ["temperature_2m",
                         "wind_gusts_10m", # added
                         "shortwave_radiation"
                         ]
-
-# set the database of cities with their coordinates
-const DF_CITIES = joinpath(@__DIR__,
-                           "..",
-                           "data",
-                           "cities500_lat_long.csv") |> csv_to_df    
        
 mutable struct CityInput
     city::String
@@ -50,6 +44,12 @@ function csv_to_df(path::String)
     return df_cities
 
 end
+
+# set the database of cities with their coordinates
+const DF_CITIES = csv_to_df(joinpath(@__DIR__,
+                           "..",
+                           "data",
+                           "cities500_lat_long.csv"))
 
 # find the coordinates for the input city
 function fetch_lat_long(city::String, i_row::Int64)
