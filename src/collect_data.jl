@@ -1,4 +1,17 @@
-# collect the hourly wind forecast data for multiple parameters in one data frame
+"""
+collect_wind_data(city)
+
+    Collects the hourly wind forecast data for multiple parameters in one DataFrame.
+    The wanted parameters can be set in the parameters vector. Then, for each parameter
+    the data is pulled through the get_hourly_forecast function and stored in a DataFrame.
+    Converts km/h into knots for further usage of the data.
+
+    Arguments:
+        city: Input city name as a string ("Mycity"). Check for correct spelling!
+
+    Returns:
+        The DataFrame containing all the forecasts.
+"""
 function collect_wind_data(city)
 
     df_wind = DataFrame()
