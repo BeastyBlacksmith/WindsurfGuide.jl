@@ -52,7 +52,7 @@ directions(coast)
 function directions(coast)
     
     df_dir = DataFrame(
-            dir = ["offshore", "crossshore", "crossshore", "cross-onshore", "cross-onshore", "onshore"],
+            dir = ["offshore", "crossshore", "cross-onshore", "onshore", "cross-onshore", "crossshore"],
             start = [coast+110, coast+67.5, coast+22.5, coast-22.5, coast-67.5, coast-110],
             stop = [coast-110, coast+110, coast+67.5, coast+22.5, coast-22.5, coast-67.5])
     
@@ -221,8 +221,8 @@ check_forecast(bodyweight, sail_size, level, coast)
 """
 function check_forecast(bodyweight, sail_size, level, coast)
 
-    # df_wind = collect_wind_data("Sankt Peter-Ording")
-    df_wind = CSV.read("data/test_wind_data.csv", DataFrame)
+    df_wind = collect_wind_data("Sankt Peter-Ording")
+    # df_wind = CSV.read("data/test_wind_data.csv", DataFrame)
 
     guidelines, lb_wind, ub_wind, lb_sail, ub_sail = check_bodyweight(bodyweight, sail_size)
 
