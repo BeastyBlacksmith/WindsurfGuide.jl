@@ -1,4 +1,8 @@
 using Test
+using WindsurfGuide
+using DataFrames
+using CSV
+
 
 @testset "windsurfing recommendations" begin
     @testset "sail recommendations" begin
