@@ -141,12 +141,16 @@ function check_gusts(df_wind, level)
     results_gusts = String[]
 
     for i in 1:size(df_wind, 1)
-        if level == "beginner" && df_wind."wind_gusts_10m"[i] >= df_wind."windspeed_10m"[i] + 8
-            push!(results_gusts, "The wind gusts are too strong for your skill level, consider waiting for better conditions.")
-        elseif level == "intermediate" && df_wind."wind_gusts_10m"[i] >= df_wind."windspeed_10m"[i] + 12
-            push!(results_gusts, "The wind gusts are too strong for your skill level, consider waiting for better conditions.")
-        elseif level == "advanced" && df_wind."wind_gusts_10m"[i] >= df_wind."windspeed_10m"[i] + 15
-            push!(results_gusts, "There are strong wind gusts, choose equipment accordingly.")
+        if df_wind."windspeed_10m"[i] >= 10
+            if level == "beginner" && df_wind."wind_gusts_10m"[i] >= df_wind."windspeed_10m"[i] + 8
+                push!(results_gusts, "The wind gusts are too strong for your skill level, consider waiting for better conditions.")
+            elseif level == "intermediate" && df_wind."wind_gusts_10m"[i] >= df_wind."windspeed_10m"[i] + 12
+                push!(results_gusts, "The wind gusts are too strong for your skill level, consider waiting for better conditions.")
+            elseif level == "advanced" && df_wind."wind_gusts_10m"[i] >= df_wind."windspeed_10m"[i] + 15
+                push!(results_gusts, "There are strong wind gusts, choose equipment accordingly.")
+            else
+                push!(results_gusts, "Wind conditions are mostly stable, gusts are not too strong.")
+            end
         else
             push!(results_gusts, "Wind conditions are mostly stable, gusts are not too strong.")
         end
@@ -219,9 +223,9 @@ check_forecast(bodyweight, sail_size, level, coast)
     Returns:
         A DataFrame containing all the recommendations per forecast time.
 """
-function check_forecast(bodyweight, sail_size, level, coast)
+function check_forecast(bodyweight, sail_size, level, city, coast)
 
-    df_wind = collect_wind_data("Sankt Peter-Ording")
+    df_wind = collect_wind_data(city)
     # df_wind = CSV.read("data/test_wind_data.csv", DataFrame)
 
     guidelines, lb_wind, ub_wind, lb_sail, ub_sail = check_bodyweight(bodyweight, sail_size)
@@ -289,9 +293,9 @@ get_recs(bodyweight, sail_size, level, coast)
     Returns:
         A DataFrame containing the forecast time and the overall recommendations.
 """
-function get_recs(bodyweight, sail_size, level, coast)
+function get_recs(bodyweight, sail_size, level, city, coast)
 
-    df_results = check_forecast(bodyweight, sail_size, level, coast)
+    df_results = check_forecast(bodyweight, sail_size, level, city,  coast)
     df_recs = DataFrame()
     df_recs[!, :Time] = df_results.TIME
     rec = String[]
