@@ -18,7 +18,7 @@ function check_level(guidelines, df_wind, level, i)
 
     for j in 1:size(guidelines, 1)
 
-        if guidelines."max_knots"[j] >= df_wind.windspeed_10m[i] >= guidelines."min_knots"[j]
+        if guidelines."max_knots"[j] > df_wind.windspeed_10m[i] >= guidelines."min_knots"[j]
 
             if level == "beginner"
                 current = guidelines."beginner"[j]
@@ -184,7 +184,7 @@ function check_windspeed(df_wind, guidelines, level, lb_wind, ub_wind, lb_sail, 
         elseif 4 <= df_wind."windspeed_10m"[i] < lb_wind
             push!(results_windspeed, "Wind is too low for your sail size, consider using a bigger sail of 
             up to $(ub_sail) m² and check again.")
-        elseif ub_wind < df_wind."windspeed_10m"[i] < 28
+        elseif ub_wind <= df_wind."windspeed_10m"[i] < 28
             push!(results_windspeed, "Wind is too strong for your sail size, consider using a smaller sail of 
             at least $(lb_sail) m² and check again.")
         else
@@ -223,6 +223,33 @@ function check_forecast(bodyweight, sail_size, level, coast)
 
     df_wind = collect_wind_data("Sankt Peter-Ording")
     # df_wind = CSV.read("data/test_wind_data.csv", DataFrame)
+
+    guidelines, lb_wind, ub_wind, lb_sail, ub_sail = check_bodyweight(bodyweight, sail_size)
+
+    df_results = DataFrame()
+    df_results[!, :TIME] = df_wind.TIME
+    df_results[!, :Windspeed] = df_wind.windspeed_10m
+
+    if !(level in ["beginner", "intermediate", "advanced"])
+        error("Please enter a valid skill level: beginner, intermediate, or advanced")
+    end
+
+    results_direction = check_direction(df_wind, coast, level)
+    results_gusts = check_gusts(df_wind, level)
+    results_windspeed = check_windspeed(df_wind, guidelines, level, lb_wind, ub_wind, lb_sail, ub_sail)
+
+    df_results[!, "windspeed_recs"] = results_windspeed
+    df_results[!, "direction_recs"] = results_direction
+    df_results[!, "gusts"] = results_gusts
+
+    return df_results
+
+end
+
+function check_forecast_test(bodyweight, sail_size, level, coast)
+
+    # df_wind = collect_wind_data("Sankt Peter-Ording")
+    df_wind = CSV.read("data/test_wind_data.csv", DataFrame)
 
     guidelines, lb_wind, ub_wind, lb_sail, ub_sail = check_bodyweight(bodyweight, sail_size)
 
@@ -288,3 +315,28 @@ function get_recs(bodyweight, sail_size, level, coast)
 
 end
 
+function get_recs_test(bodyweight, sail_size, level, coast)
+
+    df_results = check_forecast_test(bodyweight, sail_size, level, coast)
+    df_recs = DataFrame()
+    df_recs[!, :Time] = df_results.TIME
+    rec = String[]
+    
+    for i in 1:size(df_results, 1)
+        if occursin("too strong", df_results."windspeed_recs"[i]) ||
+            occursin("too low", df_results."windspeed_recs"[i])
+            push!(rec, df_results."windspeed_recs"[i])
+        elseif occursin("Offshore", df_results."direction_recs"[i])
+            push!(rec, df_results."direction_recs"[i])
+        elseif occursin("too strong for your skill level", df_results."gusts"[i])
+            push!(rec, df_results."gusts"[i])
+        else
+            push!(rec, df_results."windspeed_recs"[i])
+        end
+    end
+
+    df_recs[!, :Recommendation] = rec
+
+    return df_recs
+
+end
