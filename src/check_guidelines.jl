@@ -60,7 +60,7 @@ check_bodyweight(bodyweight, sail_size)
 """
 function check_bodyweight(bodyweight, sail_size)
 
-    guidelines = CSV.read("data/guidelines.csv", DataFrame, missingstring = "missing")
+    guidelines = CSV.read(joinpath(data_dir, "guidelines.csv"), DataFrame, missingstring = "missing")
     lb_wind = Inf
     ub_wind = 0
     lb_sail = Inf

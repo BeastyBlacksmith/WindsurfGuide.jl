@@ -226,7 +226,6 @@ check_forecast(bodyweight, sail_size, level, coast)
 function check_forecast(bodyweight, sail_size, level, city, coast)
 
     df_wind = collect_wind_data(city)
-    # df_wind = CSV.read("data/test_wind_data.csv", DataFrame)
 
     guidelines, lb_wind, ub_wind, lb_sail, ub_sail = check_bodyweight(bodyweight, sail_size)
 
@@ -252,8 +251,7 @@ end
 
 function check_forecast_test(bodyweight, sail_size, level, coast)
 
-    # df_wind = collect_wind_data("Sankt Peter-Ording")
-    df_wind = CSV.read("data/test_wind_data.csv", DataFrame)
+    df_wind = CSV.read(joinpath(data_dir, "test_wind_data.csv"), DataFrame)
 
     guidelines, lb_wind, ub_wind, lb_sail, ub_sail = check_bodyweight(bodyweight, sail_size)
 
