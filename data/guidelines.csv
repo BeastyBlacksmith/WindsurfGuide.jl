@@ -35,12 +35,12 @@ min_knots;max_knots;min_weight;max_weight;min_sail;max_sail;beginner;intermediat
 5;6;75;85;5.5;6;good;too low for your skill level;too low for your skill level
 5;6;85;95;6;7;good;too low for your skill level;too low for your skill level
 5;6;95;missing;7;7.5;good;too low for your skill level;too low for your skill level
-6;7;missing;55;4;4.5;very good;good;good
-6;7;55;65;4.5;5;very good;good;good
-6;7;65;75;5;5.5;very good;good;good
-6;7;75;85;5.5;6;very good;good;good
-6;7;85;95;6;7;very good;good;good
-6;7;95;missing;7;7.5;very good;good;good
+6;7;missing;55;4;4.5;good;too low for your skill level;too low for your skill level
+6;7;55;65;4.5;5;good;too low for your skill level;too low for your skill level
+6;7;65;75;5;5.5;good;too low for your skill level;too low for your skill level
+6;7;75;85;5.5;6;good;too low for your skill level;too low for your skill level
+6;7;85;95;6;7;good;too low for your skill level;too low for your skill level
+6;7;95;missing;7;7.5;good;too low for your skill level;too low for your skill level
 7;8;missing;55;4;4.5;very good;good;good
 7;8;55;65;4.5;5;very good;good;good
 7;8;65;75;5;5.5;very good;good;good
