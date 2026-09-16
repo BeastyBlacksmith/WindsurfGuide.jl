@@ -206,7 +206,7 @@ function check_windspeed(df_wind, guidelines, level, lb_wind, ub_wind, lb_sail, 
 end
 
 """
-check_forecast(bodyweight, sail_size, level, coast)
+check_forecast(bodyweight, sail_size, level, city, coast)
 
     Loads the wind forecast and evaluates the conditions based on the users bodyweight, sail size, skill level,
     and coast direction. Combines the results of the recommendations based on windspeed, gusts and wind direction
@@ -276,7 +276,7 @@ function check_forecast_test(bodyweight, sail_size, level, coast)
 end
 
 """
-get_recs(bodyweight, sail_size, level, coast)
+get_recs(bodyweight, sail_size, level, city, coast)
 
     Generates an overall recommendation by selecting the most relevant criteria first. If none of the
     criteria apply, it returns the windspeed based recommendation.
